@@ -1,0 +1,18 @@
+{
+ "dev без шумоподавителя": {
+  "fact_precision": 0.5058,
+  "fact_recall": 0.4084,
+  "temporal_recall": 0.5042,
+  "n_temporal": 353,
+  "state_accuracy": 0.5482,
+  "grounding_turn": 0.8028
+ },
+ "dev + шумоподавитель": {
+  "fact_precision": 0.5026,
+  "fact_recall": 0.4235,
+  "temporal_recall": 0.5027,
+  "n_temporal": 366,
+  "state_accuracy": 0.5442,
+  "grounding_turn": 0.789
+ }
+}

@@ -1,0 +1,6 @@
+gen  0 best=+0.1235 mean=-0.0798 T=0.5089 S=0.5714 P=0.429 R=0.4401 (19.4s)
+gen  1 best=+0.1235 mean=-0.0276 T=0.5089 S=0.5714 P=0.429 R=0.4401 (13.2s)
+gen  2 best=+0.1235 mean=+0.0143 T=0.5089 S=0.5714 P=0.429 R=0.4401 (14.5s)
+gen  3 best=+0.1235 mean=+0.0394 T=0.5089 S=0.5714 P=0.429 R=0.4401 (15.0s) | dev T=0.5131 S=0.5587
+  цель достигнута на dev (T≥0.451, S≥0.505) — стоп
+VAL GLiNER forced on: {'fact_precision': 0.4935, 'fact_recall': 0.4146, 'temporal_recall': 0.5383, 'n_temporal': 431, 'state_accuracy': 0.5762, 'grounding_turn': 0.8131, 'state_accuracy_official': 0.5778}
