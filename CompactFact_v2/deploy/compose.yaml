@@ -1,0 +1,5 @@
+services:
+  compactfact:
+    build: {context: .., dockerfile: deploy/Dockerfile}
+    ports: ["127.0.0.1:8000:8000"]
+    environment: [CFX_MODEL=models/compactfact_v5.pkl, CFX_GENES=models/genes_best.json]

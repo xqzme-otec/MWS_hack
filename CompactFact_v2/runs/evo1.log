@@ -1,0 +1,15 @@
+cache: golden 229 ms/call, dev 157 ms/call, 103s total
+one eval on golden 3.66 s {'fact_precision': 0.5842, 'fact_recall': 0.4257, 'temporal_recall': 0.2759, 'n_temporal': 174, 'state_accuracy': 0.3779, 'grounding_turn': 0.8169}
+gen  0 best=-0.0843 mean=-0.1698 T=0.2922 S=0.3733 P=0.6974 R=0.3824 (7.1s)
+gen  1 best=-0.0610 mean=-0.1218 T=0.3226 S=0.3825 P=0.6172 R=0.3838 (5.1s)
+gen  2 best=-0.0610 mean=-0.1148 T=0.3226 S=0.3825 P=0.6172 R=0.3838 (4.7s)
+gen  3 best=-0.0610 mean=-0.1052 T=0.3226 S=0.3825 P=0.6172 R=0.3838 (2.6s) | dev T=0.3703 S=0.4386
+gen  4 best=-0.0541 mean=-0.1042 T=0.3799 S=0.3917 P=0.4893 R=0.43 (5.1s)
+gen  5 best=-0.0291 mean=-0.0827 T=0.3536 S=0.447 P=0.4623 R=0.443 (3.7s)
+gen  6 best=+0.0031 mean=-0.0764 T=0.3909 S=0.4516 P=0.4118 R=0.4719 (3.2s)
+gen  7 best=+0.0031 mean=-0.0608 T=0.3909 S=0.4516 P=0.4118 R=0.4719 (3.4s) | dev T=0.4252 S=0.4925
+gen  8 best=+0.0257 mean=-0.0409 T=0.4091 S=0.4839 P=0.4134 R=0.4892 (3.1s)
+gen  9 best=+0.0257 mean=-0.0278 T=0.4091 S=0.4839 P=0.4134 R=0.4892 (4.0s)
+gen 10 best=+0.0257 mean=-0.0164 T=0.4091 S=0.4839 P=0.4134 R=0.4892 (3.5s)
+gen 11 best=+0.0257 mean=-0.0241 T=0.4091 S=0.4839 P=0.4134 R=0.4892 (3.6s) | dev T=0.4376 S=0.5165
+VAL best genes: {'fact_precision': 0.4004, 'fact_recall': 0.5154, 'temporal_recall': 0.4732, 'n_temporal': 579, 'state_accuracy': 0.5136, 'grounding_turn': 0.7403} fit 0.0667

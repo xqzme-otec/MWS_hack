@@ -1,0 +1,19 @@
+{
+ "thr_service_state": 0.35,
+ "thr_tariff": 0.05,
+ "thr_ticket_status": 0.066,
+ "thr_action": 0.292,
+ "thr_agreement": 0.05,
+ "max_per_turn": 2,
+ "trap_offer": 0,
+ "trap_question": 1,
+ "trap_imperative": 1,
+ "chain_mode": 0,
+ "date_conf_agreement": 0.213,
+ "date_conf_state": 0.044,
+ "obj_back": 5,
+ "one_open_per_object": 0,
+ "drop_dup_window": 0,
+ "obj_learned": 1,
+ "drop_hidden_closed": 1
+}
