@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "compactfact"
+version = "0.1.0"
+description = "Reproducible CPU fact extraction from noisy Russian support conversations"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2.2,<3", "scipy>=1.14,<2", "scikit-learn>=1.6,<2", "joblib>=1.4,<2", "fastapi>=0.115,<1", "uvicorn>=0.34,<1", "pydantic>=2.10,<3", "threadpoolctl>=3.5,<4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "httpx>=0.28,<1", "psutil>=7,<8"]
+
+[project.scripts]
+compactfact = "compactfact.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
