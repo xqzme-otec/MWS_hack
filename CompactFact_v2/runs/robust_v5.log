@@ -1,6 +1,0 @@
-data/val.jsonl {'fact_precision': 0.4862, 'fact_recall': 0.4482, 'temporal_recall': 0.5, 'n_temporal': 486, 'state_accuracy': 0.5506, 'grounding_turn': 0.7775, 'state_accuracy_official': 0.5506} 
-   +denoise {'fact_precision': 0.4764, 'fact_recall': 0.4547, 'temporal_recall': 0.505, 'n_temporal': 499, 'state_accuracy': 0.5522, 'grounding_turn': 0.7723, 'state_accuracy_official': 0.5522}
-runs/val_adv_0.15.jsonl {'fact_precision': 0.5, 'fact_recall': 0.4293, 'temporal_recall': 0.4889, 'n_temporal': 452, 'state_accuracy': 0.5393, 'grounding_turn': 0.7727, 'state_accuracy_official': 0.5393} 
-   +denoise {'fact_precision': 0.4815, 'fact_recall': 0.4434, 'temporal_recall': 0.4832, 'n_temporal': 476, 'state_accuracy': 0.5554, 'grounding_turn': 0.7738, 'state_accuracy_official': 0.5554}
-runs/val_adv_0.3.jsonl {'fact_precision': 0.52, 'fact_recall': 0.4092, 'temporal_recall': 0.4988, 'n_temporal': 419, 'state_accuracy': 0.5281, 'grounding_turn': 0.7748, 'state_accuracy_official': 0.5281} 
-   +denoise {'fact_precision': 0.495, 'fact_recall': 0.4309, 'temporal_recall': 0.4921, 'n_temporal': 445, 'state_accuracy': 0.5329, 'grounding_turn': 0.7673, 'state_accuracy_official': 0.5329}

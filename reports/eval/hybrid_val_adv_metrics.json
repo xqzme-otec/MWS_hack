@@ -1,0 +1,21 @@
+{
+ "metrics_version": "2.1",
+ "n_calls": 383,
+ "n_gold_facts": 1845,
+ "n_pred_facts": 1466,
+ "fact_precision": 0.4993,
+ "fact_recall": 0.3967,
+ "temporal_recall": 0.5324,
+ "n_temporal": 370,
+ "state_accuracy": 0.557,
+ "n_state": 623,
+ "grounding_turn": 0.7186,
+ "grounding_span": null,
+ "n_grounded": 732,
+ "schema_valid_calls": "383/383",
+ "latency_ms_p50": 701.6,
+ "latency_ms_p95": 2542.8,
+ "latency_ms_mean": 991.2,
+ "threads": 2,
+ "mode": "hybrid"
+}

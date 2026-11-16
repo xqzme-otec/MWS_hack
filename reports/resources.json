@@ -1,0 +1,91 @@
+{
+ "method": "(одинакова для всех строк):\n  * один и тот же набор звонков (первые N из data/val.jsonl, иначе examples/calls.jsonl);\n  * каждый вариант — в отдельном процессе (чистая память), CPU, torch.set_num_threads(T) (по умолчанию 2);\n  * 3 прогревочных звонка не учитываются; задержка = время конвейера на звонок целиком\n    (GLiNER + бустинг + сборка), p50 / p95 / среднее;\n  * память — пиковый RSS процесса (ru_maxrss) после загрузки и прогона;\n  * параметры — уникальные тензоры GLiNER (связанные веса считаются один раз) + узлы деревьев бустинга;\n  * GPU-секунды на звонок — 0 (GPU не используется).",
+ "machine": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "cores": 2,
+  "python": "3.13.18",
+  "os": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+ },
+ "rows": [
+  {
+   "variant": "boosting",
+   "n_calls": 60,
+   "mean_turns": 23.8,
+   "threads": 2,
+   "latency_ms_p50": 227.3,
+   "latency_ms_p95": 627.6,
+   "latency_ms_mean": 287.2,
+   "load_s": 1.1,
+   "peak_rss_mb": 789,
+   "gliner_params": 0,
+   "boosting_tree_nodes": 52555,
+   "params_total_m": 0.05,
+   "disk_mb": 16.0,
+   "gpu_s_per_call": 0.0
+  },
+  {
+   "variant": "gliner",
+   "n_calls": 60,
+   "mean_turns": 23.8,
+   "threads": 2,
+   "latency_ms_p50": 684.0,
+   "latency_ms_p95": 2362.5,
+   "latency_ms_mean": 905.0,
+   "load_s": 5.5,
+   "peak_rss_mb": 1397,
+   "gliner_params": 51542976,
+   "boosting_tree_nodes": 52555,
+   "params_total_m": 51.6,
+   "disk_mb": 114.3,
+   "gpu_s_per_call": 0.0
+  },
+  {
+   "variant": "hybrid_prefilter",
+   "n_calls": 60,
+   "mean_turns": 23.8,
+   "threads": 2,
+   "latency_ms_p50": 444.1,
+   "latency_ms_p95": 1141.5,
+   "latency_ms_mean": 541.9,
+   "load_s": 5.0,
+   "peak_rss_mb": 1408,
+   "gliner_params": 51542976,
+   "boosting_tree_nodes": 52555,
+   "params_total_m": 51.6,
+   "disk_mb": 114.3,
+   "gpu_s_per_call": 0.0
+  },
+  {
+   "variant": "hybrid",
+   "n_calls": 60,
+   "mean_turns": 23.8,
+   "threads": 2,
+   "latency_ms_p50": 854.6,
+   "latency_ms_p95": 2604.7,
+   "latency_ms_mean": 1062.5,
+   "load_s": 5.1,
+   "peak_rss_mb": 1433,
+   "gliner_params": 51542976,
+   "boosting_tree_nodes": 52555,
+   "params_total_m": 51.6,
+   "disk_mb": 114.3,
+   "gpu_s_per_call": 0.0
+  },
+  {
+   "variant": "hybrid_fullvocab",
+   "n_calls": 60,
+   "mean_turns": 23.8,
+   "threads": 2,
+   "latency_ms_p50": 829.1,
+   "latency_ms_p95": 2653.8,
+   "latency_ms_mean": 1082.1,
+   "load_s": 12.8,
+   "peak_rss_mb": 2326,
+   "gliner_params": 160321984,
+   "boosting_tree_nodes": 52555,
+   "params_total_m": 160.37,
+   "disk_mb": 627.6,
+   "gpu_s_per_call": 0.0
+  }
+ ]
+}

@@ -1,8 +1,0 @@
-cache: golden 219 ms/call, dev 183 ms/call, 67s total
-one eval on golden 5.66 s {'fact_precision': 0.5836, 'fact_recall': 0.4632, 'temporal_recall': 0.3299, 'n_temporal': 194, 'state_accuracy': 0.4424, 'grounding_turn': 0.8598}
-gen  0 best=+0.0708 mean=-0.0445 T=0.4525 S=0.5346 P=0.4614 R=0.4574 (16.9s)
-gen  1 best=+0.0708 mean=-0.0044 T=0.4525 S=0.5346 P=0.4614 R=0.4574 (16.5s)
-gen  2 best=+0.1135 mean=+0.0359 T=0.5 S=0.5622 P=0.4126 R=0.443 (15.0s)
-gen  3 best=+0.1135 mean=+0.0261 T=0.5 S=0.5622 P=0.4126 R=0.443 (16.8s) | dev T=0.4558 S=0.5409
-  цель достигнута на dev (T≥0.451, S≥0.505) — стоп
-VAL best genes: {'fact_precision': 0.4499, 'fact_recall': 0.4482, 'temporal_recall': 0.5231, 'n_temporal': 476, 'state_accuracy': 0.5746, 'grounding_turn': 0.7751, 'state_accuracy_official': 0.5762} fit 0.1371

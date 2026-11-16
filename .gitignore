@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+.hf/
+.env
+runs/
+# данные кейса не публикуем — кладутся локально из пакета организаторов
+data/train.jsonl
+data/val.jsonl
+data/val_adv_*.jsonl
+data/baseline_pred.jsonl
+# веса храним частями (models/g13_ru/pytorch_model.bin.part*), целый файл собирается при запуске
+models/g13_ru/pytorch_model.bin
+models/g13/
+reports/eval/*_pred.jsonl

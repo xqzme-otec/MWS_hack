@@ -1,0 +1,15 @@
+{
+ "metrics_version": "2.1",
+ "n_calls": 383,
+ "n_gold_facts": 1845,
+ "n_pred_facts": 2097,
+ "fact_precision": 0.3348,
+ "fact_recall": 0.3805,
+ "temporal_recall": 0.4706,
+ "n_temporal": 442,
+ "state_accuracy": 0.5345,
+ "n_state": 623,
+ "grounding_turn": 0.7835,
+ "grounding_span": null,
+ "n_grounded": 702
+}
