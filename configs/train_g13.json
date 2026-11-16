@@ -1,0 +1,22 @@
+{
+ "base": "knowledgator/gliner-x-small",
+ "epochs": 3.0,
+ "bs": 4,
+ "lr": 4.67e-05,
+ "head_lr": 0.000105,
+ "warmup": 0.06,
+ "neg_ratio": 0.277,
+ "noise_copies": 0,
+ "noise_level": 0.159,
+ "evals_per_epoch": 2,
+ "fp16": false,
+ "seed": 42,
+ "n_dev": 150,
+ "keep_layers": 3,
+ "rnn": 1,
+ "max_width": 6,
+ "dropout": 0.167,
+ "freeze_layers": 0,
+ "ctx": 0,
+ "total_steps": 14634
+}

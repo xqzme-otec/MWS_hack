@@ -1,0 +1,43 @@
+# docker compose up --build                       → веб-интерфейс и API на http://localhost:8000
+# docker compose --profile eval run --rm eval     → метрики на val + adversarial, разбор ошибок, замер ресурсов
+# docker compose --profile train run --rm train   → обучение с нуля (CPU; на GPU — сервис train-gpu)
+x-common: &common
+  build: .
+  image: compactfact:latest
+  volumes:
+    - ./data:/app/data          # сюда положите train.jsonl / val.jsonl из пакета кейса (catalog.json уже есть)
+    - ./reports:/app/reports
+    - ./runs:/app/runs
+
+services:
+  app:
+    <<: *common
+    ports: ["8000:8000"]
+    restart: unless-stopped
+
+  eval:
+    <<: *common
+    profiles: ["eval"]
+    command: >
+      bash -c "python src/evaluate.py --sets val,val_adv &&
+               python src/error_report.py &&
+               python src/bench_resources.py --n 60 &&
+               python src/make_report.py"
+
+  train:
+    <<: *common
+    profiles: ["train"]
+    command: bash scripts/reproduce.sh
+
+  train-gpu:
+    <<: *common
+    profiles: ["train-gpu"]
+    build:
+      context: .
+      args: {TORCH_INDEX: "https://download.pytorch.org/whl/cu126"}
+    image: compactfact:gpu
+    command: bash scripts/reproduce.sh
+    deploy:
+      resources:
+        reservations:
+          devices: [{driver: nvidia, count: 1, capabilities: [gpu]}]

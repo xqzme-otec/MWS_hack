@@ -1,0 +1,11 @@
+.git
+runs/
+reports/eval/
+data/train.jsonl
+data/val.jsonl
+data/val_adv_0.3.jsonl
+data/baseline_pred.jsonl
+**/__pycache__
+*.pyc
+.hf/
+models/g13/

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CompactFact — факты из звонков</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="logo">CF</div>
+    <div>
+      <div class="title">CompactFact</div>
+      <div class="subtitle">компактные факты из транскриптов звонков · GLiNER + бустинг · CPU</div>
+    </div>
+  </div>
+  <div class="engine" role="tablist" aria-label="Движок">
+    <button data-mode="hybrid" class="on" title="GLiNER на всех репликах + кандидаты бустинга">Гибрид</button>
+    <button data-mode="gliner" title="Только GLiNER">GLiNER</button>
+    <button data-mode="boosting" title="Только бустинг-ранжировщик">Бустинг</button>
+  </div>
+  <div class="chips" id="chips"></div>
+</header>
+
+<main class="grid">
+  <!-- Левая колонка: выбор звонка -->
+  <aside class="panel side">
+    <div class="tabs">
+      <button class="tab on" data-tab="list">Звонки</button>
+      <button class="tab" data-tab="own">Свой звонок</button>
+    </div>
+    <div class="tabpane" id="pane-list">
+      <div class="row">
+        <input id="q" type="search" placeholder="поиск по call_id…">
+        <button id="rand" class="ghost" title="Случайный звонок">🎲</button>
+      </div>
+      <div id="src" class="muted small"></div>
+      <ul id="list" class="list"></ul>
+    </div>
+    <div class="tabpane hidden" id="pane-own">
+      <label class="small muted">Дата звонка</label>
+      <input id="own-date" type="datetime-local" value="2026-01-24T16:00">
+      <label class="small muted">Реплики — по одной на строку, «ОП:» оператор, «КЛ:» клиент</label>
+      <textarea id="own-text" rows="16">ОП: Здраствуйте, меня зовут Елена, я оператор технической поддержки. Чем могу помочь?
+КЛ: Здраствуйте. У меня такая проблема: запись разговоров работала, а теперь сообщения не приходят. Началось это где-то два дня назад.
+КЛ: Я уже пробовала отключать все другие устройства от сети — думала, может, из-за них. Но не помогло, сообщения так и не приходят.
+КЛ: Потом телефон перезагружала — тоже не помогло.
+КЛ: Ещё обновляла прошивку на роутере, но это тоже не дало результата.
+ОП: Понятно. Тогда я могу предложить выезд специалиста. В четверг с утра вам будет удобно?
+КЛ: Да, в четверг с утра подходит.
+ОП: Хорошо, специалист свяжется с вами в четверг, чтобы уточнить время визита.
+КЛ: Да, хорошо, спасибо.
+ОП: Всего доброго, до свидания!</textarea>
+      <button id="own-run" class="primary wide">Извлечь факты</button>
+    </div>
+  </aside>
+
+  <!-- Центр: транскрипт -->
+  <section class="panel">
+    <div class="panel-head">
+      <div>
+        <div class="h2" id="call-title">Звонок</div>
+        <div class="muted small" id="call-sub">выберите звонок слева</div>
+      </div>
+      <label class="switch small"><input type="checkbox" id="dbg"> сырые спаны GLiNER</label>
+    </div>
+    <div id="legend" class="legend"></div>
+    <div id="transcript" class="transcript"><div class="empty">Здесь появится транскрипт с подсвеченными фактами</div></div>
+  </section>
+
+  <!-- Правая колонка: факты -->
+  <section class="panel facts-panel">
+    <div class="panel-head">
+      <div class="h2">Факты <span id="nfacts" class="badge"></span></div>
+      <div id="latency" class="latency"></div>
+    </div>
+    <div id="callmetrics" class="callmetrics hidden"></div>
+    <div id="timeline" class="timeline hidden"></div>
+    <div id="facts" class="facts"><div class="empty">—</div></div>
+    <div id="missed" class="missed hidden"></div>
+    <details class="json"><summary>JSON ответа (схема кейса)</summary><pre id="json"></pre></details>
+  </section>
+</main>
+<footer class="foot muted small">
+  POST <code>/extract</code> — API кейса · <a href="/docs">/docs</a> · модель: GLiNER g13-ru (51.5 M параметров) + градиентный бустинг · без GPU
+</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>

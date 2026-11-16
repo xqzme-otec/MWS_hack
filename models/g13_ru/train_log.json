@@ -1,0 +1,151 @@
+{
+ "args": {
+  "base": "knowledgator/gliner-x-small",
+  "out": "out/g13",
+  "epochs": 3.0,
+  "max_minutes": 60.0,
+  "bs": 4,
+  "lr": 4.67e-05,
+  "head_lr": 0.000105,
+  "warmup": 0.06,
+  "neg_ratio": 0.277,
+  "noise_copies": 0,
+  "noise_level": 0.159,
+  "evals_per_epoch": 2,
+  "fp16": false,
+  "seed": 42,
+  "n_calls": 0,
+  "n_dev": 150,
+  "keep_layers": 3,
+  "rnn": 1,
+  "max_width": 6,
+  "dropout": 0.167,
+  "freeze_layers": 0,
+  "ctx": 0,
+  "save": 1,
+  "final_eval_only": false,
+  "lat_calls": 4,
+  "result": "out/g13_result.json",
+  "extra": "",
+  "extra_n": 0
+ },
+ "params": 160321984,
+ "train_examples": 24220,
+ "labeling": {
+  "facts": 13332,
+  "placed": 11262,
+  "dropped_examples": 3266
+ },
+ "log": [
+  {
+   "step": 2439,
+   "epoch": 0.4,
+   "loss": 6.4237,
+   "dev": {
+    "f1": 0.2275,
+    "p": 0.3744,
+    "r": 0.1634,
+    "overlap_p": 0.3744
+   },
+   "dev_noise0.3": {
+    "f1": 0.2174,
+    "p": 0.3911,
+    "r": 0.1505,
+    "overlap_p": 0.3911
+   },
+   "minutes": 5.3
+  },
+  {
+   "step": 4878,
+   "epoch": 0.81,
+   "loss": 6.0645,
+   "dev": {
+    "f1": 0.4049,
+    "p": 0.7059,
+    "r": 0.2839,
+    "overlap_p": 0.7326
+   },
+   "dev_noise0.3": {
+    "f1": 0.3694,
+    "p": 0.7117,
+    "r": 0.2495,
+    "overlap_p": 0.7423
+   },
+   "minutes": 10.4
+  },
+  {
+   "step": 7317,
+   "epoch": 1.21,
+   "loss": 5.0414,
+   "dev": {
+    "f1": 0.481,
+    "p": 0.6133,
+    "r": 0.3957,
+    "overlap_p": 0.6433
+   },
+   "dev_noise0.3": {
+    "f1": 0.4626,
+    "p": 0.6113,
+    "r": 0.372,
+    "overlap_p": 0.6396
+   },
+   "minutes": 15.4
+  },
+  {
+   "step": 9756,
+   "epoch": 1.61,
+   "loss": 4.5531,
+   "dev": {
+    "f1": 0.5093,
+    "p": 0.5544,
+    "r": 0.471,
+    "overlap_p": 0.5975
+   },
+   "dev_noise0.3": {
+    "f1": 0.4744,
+    "p": 0.5321,
+    "r": 0.428,
+    "overlap_p": 0.5775
+   },
+   "minutes": 20.4
+  },
+  {
+   "step": 12195,
+   "epoch": 2.01,
+   "loss": 3.7954,
+   "dev": {
+    "f1": 0.5083,
+    "p": 0.4891,
+    "r": 0.529,
+    "overlap_p": 0.5467
+   },
+   "dev_noise0.3": {
+    "f1": 0.467,
+    "p": 0.4551,
+    "r": 0.4796,
+    "overlap_p": 0.5224
+   },
+   "minutes": 25.9
+  },
+  {
+   "step": 14634,
+   "epoch": 2.42,
+   "loss": 3.34,
+   "dev": {
+    "f1": 0.5523,
+    "p": 0.5541,
+    "r": 0.5505,
+    "overlap_p": 0.5952
+   },
+   "dev_noise0.3": {
+    "f1": 0.5277,
+    "p": 0.5446,
+    "r": 0.5118,
+    "overlap_p": 0.5881
+   },
+   "minutes": 31.5
+  }
+ ],
+ "best_score": 0.54,
+ "minutes": 31.5
+}

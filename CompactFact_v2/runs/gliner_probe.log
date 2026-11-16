@@ -1,9 +1,0 @@
-/usr/local/lib/python3.13/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
-  warnings.warn(
-train examples 547, dev 392; spans/ex 0.77
-trainable 26.24M / 173.2M (15.2%)
-/home/claude/cfx/src/train_gliner.py:86: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
-Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
-  losses.append(float(loss)); step += 1
-{'step': 20, 'loss': 132.5615, 'sec': 97.1, 'sec_per_step': 4.86}
-saved runs/gliner_probe

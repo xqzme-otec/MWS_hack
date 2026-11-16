@@ -1,0 +1,7 @@
+{
+ "vocab_old": 250102,
+ "vocab_new": 37643,
+ "params_old": 160321984,
+ "params_new": 51542976,
+ "fp16_storage": true
+}

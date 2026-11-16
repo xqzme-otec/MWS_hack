@@ -1,0 +1,102 @@
+{
+ "xs|fp32|t1|c0": {
+  "ms_per_turn": 109.6,
+  "ms_per_call": 2757.0,
+  "params_M": 172.1
+ },
+ "xs|fp32|t1|c25": {
+  "ms_per_turn": 155.7,
+  "ms_per_call": 3918.0,
+  "params_M": 172.1
+ },
+ "xs|fp32|t2|c0": {
+  "ms_per_turn": 53.3,
+  "ms_per_call": 1342.0,
+  "params_M": 172.1
+ },
+ "xs|fp32|t2|c25": {
+  "ms_per_turn": 75.3,
+  "ms_per_call": 1896.0,
+  "params_M": 172.1
+ },
+ "xs|int8|t1|c0": {
+  "ms_per_turn": 49.5,
+  "ms_per_call": 1245.0,
+  "params_M": 172.1
+ },
+ "xs|int8|t1|c25": {
+  "ms_per_turn": 87.6,
+  "ms_per_call": 2205.0,
+  "params_M": 172.1
+ },
+ "xs|int8|t2|c0": {
+  "ms_per_turn": 35.6,
+  "ms_per_call": 896.0,
+  "params_M": 172.1
+ },
+ "xs|int8|t2|c25": {
+  "ms_per_turn": 49.2,
+  "ms_per_call": 1238.0,
+  "params_M": 172.1
+ },
+ "multi|fp32|t2|c0": {
+  "ms_per_turn": 153.6,
+  "ms_per_call": 3866.0,
+  "params_M": 288.9
+ },
+ "multi|fp32|t2|c25": {
+  "ms_per_turn": 213.1,
+  "ms_per_call": 5362.0,
+  "params_M": 288.9
+ },
+ "multi|int8|t2|c0": {
+  "ms_per_turn": 89.8,
+  "ms_per_call": 2261.0,
+  "params_M": 288.9
+ },
+ "multi|int8|t2|c25": {
+  "ms_per_turn": 113.1,
+  "ms_per_call": 2847.0,
+  "params_M": 288.9
+ },
+ "xb|fp32|t2|c0": {
+  "ms_per_turn": 144.2,
+  "ms_per_call": 4289.0,
+  "params_M": 301.8
+ },
+ "xb|fp32|t2|c25": {
+  "ms_per_turn": 311.7,
+  "ms_per_call": 9273.0,
+  "params_M": 301.8
+ },
+ "xb|int8|t2|c0": {
+  "ms_per_turn": 76.3,
+  "ms_per_call": 2270.0,
+  "params_M": 301.8
+ },
+ "xb|int8|t2|c25": {
+  "ms_per_turn": 111.5,
+  "ms_per_call": 3318.0,
+  "params_M": 301.8
+ },
+ "arch|fp32|t2|c0": {
+  "ms_per_turn": 29.6,
+  "note": "g1_3, Colab CPU \u00d70.34"
+ },
+ "g04|fp32|t2|c0": {
+  "ms_per_turn": 45.4,
+  "note": "g0_4, Colab CPU \u00d70.34 (\u043a\u0430\u043d\u0434\u0438\u0434\u0430\u0442)"
+ },
+ "g13|fp32|t2|c0": {
+  "ms_per_turn": 29.6,
+  "note": "g1_3, Colab CPU \u00d70.34"
+ },
+ "g13d|fp32|t2|c0": {
+  "ms_per_turn": 29.6,
+  "note": "g1_3, Colab CPU \u00d70.34"
+ },
+ "g2|fp32|t2|c0": {
+  "ms_per_turn": 145.7,
+  "note": "GLiNER2.5 ru-pii 11 \u0441\u043b\u043e\u0451\u0432, Mac CPU \u00d73.36"
+ }
+}
